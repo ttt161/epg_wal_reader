@@ -2,7 +2,7 @@
 
 ## Logical Replication Protocol
 
-`epg_connector` implements PostgreSQL's logical replication protocol with support for:
+`epg_wal_reader` implements PostgreSQL's logical replication protocol with support for:
 
 - **pgoutput plugin** - Native PostgreSQL logical replication output format
 - **Real-time streaming** - Continuous WAL (Write-Ahead Log) data streaming
@@ -23,7 +23,7 @@
 
 ## Data Types Support
 
-The connector supports all major PostgreSQL data types:
+The epg_wal_reader supports all major PostgreSQL data types:
 
 ### Basic Types
 - **Integers**: `int2`, `int4`, `int8`
@@ -136,8 +136,8 @@ transform_change({TableName, Operation, Data, _OldData}) ->
 ### Development Setup
 
 ```bash
-$ git clone https://github.com/your-repo/epg_connector.git
-$ cd epg_connector
+$ git clone https://github.com/ttt161/epg_wal_reader.git
+$ cd epg_wal_reader
 $ make wdeps-shell # docker compose up
 $ rebar3 get-deps
 $ rebar3 compile
