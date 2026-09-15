@@ -1,0 +1,18 @@
+{application, epg_wal_reader, [
+    {description, "Postgres WAL reader"},
+    {vsn, "1.0.0"},
+    {registered, []},
+    {mod, {epg_wal_reader_app, []}},
+    {applications, [
+        kernel,
+        stdlib,
+        epgsql,
+        jsx
+    ]},
+    {env, []},
+    {modules, []},
+    {licenses, ["MIT"]},
+    {links, [
+        {"Github", "https://github.com/ttt161/epg_wal_reader"}
+    ]}
+]}.
